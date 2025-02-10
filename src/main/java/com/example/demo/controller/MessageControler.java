@@ -29,5 +29,10 @@ public class MessageControler {
         messageService.saveMessage(newMessage);
         return "redirect:/";
     }
+    @GetMapping("/deleteMesage")
+    public String deleteMessage(@RequestParam("id") Long id) {
+        messageService.deleteMessage(id);
+        return "redirect:/";
+    }
 
 }
